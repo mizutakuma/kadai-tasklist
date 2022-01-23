@@ -25,10 +25,6 @@ public class tasks {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "title", length = 255, nullable = false)
-/* @Column アノテーションの(..., nullable = false)で、必須入力が設定されている(nullable、つまりnullを許容するか否かの設定で、trueだとnullを許容し、falseだと許容しないことになる) */
-    private String title;
-
     @Column(name = "content", length = 255, nullable = false)
     private String content;
 
@@ -44,14 +40,6 @@ public class tasks {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getContent() {
